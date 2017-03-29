@@ -1,5 +1,5 @@
 API="${API_ORIGIN:-http://localhost:4741}"
-URL_PATH="/repos"
+URL_PATH="/favorites"
 curl "${API}${URL_PATH}" \
   --include \
   --request POST \
@@ -7,8 +7,8 @@ curl "${API}${URL_PATH}" \
   --header "Authorization: Token token=$TOKEN" \
   --data '{
     "repo": {
-      "title": "'"${TITLE}"'",
-      "author": "'"${AUTHOR}"'",
+      "name": "'"${NAME}"'",
+      "link": "'"${LINK}"'",
       "language": "'"${LANGUAGE}"'"
     }
   }'

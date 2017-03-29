@@ -1,5 +1,5 @@
 # frozen_string_literal: true
-class ReposController < ApplicationController
+class ReposController < OpenReadController
   before_action :set_repo, only: [:show, :update, :destroy]
 
   # GET /repos
@@ -16,7 +16,7 @@ class ReposController < ApplicationController
 
   # POST /repos
   def create
-    @repo = Repo.new(repo_params)
+    @repo = current_user.repos.build(repo_params)
 
     if @repo.save
       render json: @repo, status: :created, location: @repo
