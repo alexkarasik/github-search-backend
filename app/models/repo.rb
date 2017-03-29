@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 class Repo < ApplicationRecord
-  belongs_to :user
+  has_many :bookmarked_repos
 
   validates :title, presence: true
   validates :author, presence: true

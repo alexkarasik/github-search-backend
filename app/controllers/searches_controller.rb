@@ -5,12 +5,10 @@ require 'json'
 require 'net/http'
 
 
-class PracticesController < OpenReadController
-  before_action :set_example, only: [:update, :destroy]
-  # GET /practices
+class SearchesController < OpenReadController
 
-  def search_github
-    query = params[:search][:query]
+  def show
+    query = params[:id]
     url = "https://api.github.com/search/repositories?q=#{query}"
     response = open(url)
     data_string = response.read
