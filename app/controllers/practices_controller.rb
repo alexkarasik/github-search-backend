@@ -4,7 +4,6 @@ require 'open-uri'
 require 'json'
 require 'net/http'
 
-
 class PracticesController < OpenReadController
   before_action :set_example, only: [:update, :destroy]
   # GET /practices

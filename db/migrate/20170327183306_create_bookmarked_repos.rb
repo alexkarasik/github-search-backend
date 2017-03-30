@@ -5,6 +5,7 @@ class CreateBookmarkedRepos < ActiveRecord::Migration[5.0]
       t.references :repo, foreign_key: true
       t.references :user, foreign_key: true
 
+
       t.timestamps
     end
   end
