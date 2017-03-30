@@ -2,7 +2,7 @@
 Rails.application.routes.draw do
   resources :searches, only: [:show, :index]
   resources :bookmarked_repos, except: [:new, :edit]
-  resources :repos, only: [:index, :show]
+  resources :repos, except: [:new, :edit]
   resources :examples, except: [:new, :edit]
 
   post '/search' => 'practices#search_github'

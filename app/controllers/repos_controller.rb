@@ -48,6 +48,6 @@ class ReposController < OpenReadController
 
   # Only allow a trusted parameter "white list" through.
   def repo_params
-    params.require(:repo).permit(:title, :author, :stars, :forks, :language)
+    params.require(:repo).permit(:title, :language, :score, :forks, :description)
   end
 end

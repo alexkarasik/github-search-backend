@@ -38,13 +38,13 @@ ActiveRecord::Schema.define(version: 20170327190016) do
   end
 
   create_table "repos", force: :cascade do |t|
-    t.string   "title",      null: false
-    t.string   "author",     null: false
-    t.integer  "stars",      null: false
-    t.integer  "forks",      null: false
-    t.string   "language",   null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string   "title",       null: false
+    t.string   "language",    null: false
+    t.integer  "score",       null: false
+    t.integer  "forks",       null: false
+    t.string   "description", null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
   create_table "users", force: :cascade do |t|
